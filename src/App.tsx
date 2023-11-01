@@ -1,24 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TodoItem from './components/TodoItem';
+import NewTodoForm from './components/NewTodoForm';
+
+type ITodo = {
+  id: string;
+  title: string;
+  completed: boolean;
+};
 
 function App() {
+  const [text, setText] = useState('');
+  const [todos, setTodos] = useState<string[]>([]);
+  // variants to use hooks with ts
+  // const [] = useState<string[] | null>(null);
+  // const [] = useState<ITodo | null>(null);
+  // const [] = useState<ITodo>({} as ITodo);
+
+  const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setText(event.target.value);
+  };
+
+  const AddTodo = () => {
+    setTodos([text, ...todos]);
+    setText('');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NewTodoForm value={text} onChange={handleInput} handleClick={AddTodo} />
+      <ul>
+        <TodoItem
+          id="123"
+          completed={false}
+          title="first todo"
+          style={{ border: '1px solid gray' }}
+        />
+      </ul>
     </div>
   );
 }
