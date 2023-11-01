@@ -9,20 +9,25 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
-      "ES2021"
+      "dom.iterable",
+      "esnext"
     ],
-    "module": "es2020",
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "strictNullChecks": true,
-    "target": "es2019",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "target": "es5",
     "sourceMap": true
   },
   "include": [
-    "**/*.ts"
+    "src"
   ],
   "exclude": [
-    "templates",
     "node_modules"
   ]
 }
