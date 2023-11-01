@@ -3,11 +3,11 @@ import './App.css';
 import TodoItem from './components/TodoItem';
 import NewTodoForm from './components/NewTodoForm';
 
-type ITodo = {
-  id: string;
-  title: string;
-  completed: boolean;
-};
+// type ITodo = {
+//   id: string;
+//   title: string;
+//   completed: boolean;
+// };
 
 function App() {
   const [text, setText] = useState('');
