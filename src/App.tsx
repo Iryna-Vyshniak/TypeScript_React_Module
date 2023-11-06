@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import { useEffect, useState } from 'react';
+import './index.css';
 import NewTodoForm from './components/NewTodoForm';
 import { ITodo } from './types';
 import TodoList from './components/TodoList';
