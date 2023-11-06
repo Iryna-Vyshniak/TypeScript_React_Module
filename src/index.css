@@ -121,7 +121,7 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   width: 12rem;
   height: 8em;
   padding: 2em;
