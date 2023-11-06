@@ -27,11 +27,23 @@ export default class Counter extends React.Component<
   render() {
     return (
       <div className="counter">
-        <h1>{this.props.title}</h1>
+        <div className="wrapper">
+          <h1>{this.props.title}</h1>
+          <div className="blob">
+            <p className="blob-p">
+              <span className="blob-span"></span>
+            </p>
+          </div>
+        </div>
+
         <h2>{this.state.count}</h2>
         <div className="form">
-          <button onClick={this.increment}>+</button>
-          <button onClick={this.decrement}>-</button>
+          <button className="btn-count" onClick={this.increment}>
+            +
+          </button>
+          <button className="btn-count" onClick={this.decrement}>
+            -
+          </button>
         </div>
       </div>
     );

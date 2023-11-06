@@ -18,7 +18,7 @@ const TodoItem = ({
   removeTodo,
 }: ITodoItem) => {
   return (
-    <li style={{ color: 'red', backgroundColor: 'white', ...style }}>
+    <li style={{ color: 'red', ...style }}>
       <input
         type="checkbox"
         checked={completed}
